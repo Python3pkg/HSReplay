@@ -32,7 +32,7 @@ def main():
 					f2.write(xml_out)
 				raise Exception("%r: Log -> XML -> Document -> XML: FAIL" % (filename))
 			else:
-				print("%r: Log -> XML -> Document -> XML: SUCCESS" % (filename))
+				print(("%r: Log -> XML -> Document -> XML: SUCCESS" % (filename)))
 
 			packet_tree_in = doc_out.to_packet_tree()
 			doc_out2 = HSReplayDocument.from_packet_tree(packet_tree_in, build=doc_out.build)
@@ -44,7 +44,7 @@ def main():
 					f2.write(xml_out2)
 				raise Exception("%r: Document -> PacketTree -> Document: FAIL" % (filename))
 			else:
-				print("%r: Document -> PacketTree -> Document: SUCCESS" % (filename))
+				print(("%r: Document -> PacketTree -> Document: SUCCESS" % (filename)))
 
 
 if __name__ == "__main__":

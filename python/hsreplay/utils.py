@@ -46,7 +46,7 @@ def pretty_xml(root):
 	doc = imp.createDocument(None, "HSReplay", doctype)
 	for element in list(ret.documentElement.childNodes):
 		doc.documentElement.appendChild(element)
-	for k, v in root.attrib.items():
+	for k, v in list(root.attrib.items()):
 		doc.documentElement.setAttribute(k, v)
 
 	ret = doc.toprettyxml(indent="\t")

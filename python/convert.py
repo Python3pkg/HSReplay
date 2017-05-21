@@ -22,7 +22,7 @@ def main():
 	for filename in args.files:
 		with open(filename) as f:
 			doc = HSReplayDocument.from_log_file(f, args.processor, args.date)
-			print(doc.to_xml())
+			print((doc.to_xml()))
 
 
 if __name__ == "__main__":
